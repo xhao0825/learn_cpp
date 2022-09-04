@@ -20,7 +20,7 @@ struct lu
 void clearperson(lu *l)
 {
 	l->n = 0;
-	cout<<"ÒÑÇå¿Õ" << endl;
+	cout<<"å·²æ¸…ç©º" << endl;
 	system("pause");
 	system("cls");
 }
@@ -29,13 +29,13 @@ void showperson(lu* l)
 {
 	if (l->n == 0)
 	{
-		cout<<"¿ÕµÄÄØ£¡¿ìÀ´Ìí¼Ó°É" << endl;
+		cout<<"ç©ºçš„å‘¢ï¼å¿«æ¥æ·»åŠ å§" << endl;
 	}
 	int i;
 
 	for (i = 0; i < l->n; i++)
 	{
-		cout<<i+1<<". " << "ÐÕÃû:" << l->personArray[i].p_name << " | µç»°:" << l->personArray[i].p_phone << " | ×¡Ö·:" << l->personArray[i].p_address << endl;
+		cout<<i+1<<". " << "å§“å:" << l->personArray[i].p_name << " | ç”µè¯:" << l->personArray[i].p_phone << " | ä½å€:" << l->personArray[i].p_address << endl;
 	}
 	system("pause");
 	system("cls");
@@ -43,7 +43,7 @@ void showperson(lu* l)
 
 void deleteperson(lu* l)
 {
-	cout << "ÇëÊäÄþÒªÉ¾³ýµÄÁªÏµÈË" << endl;
+	cout << "è¯·è¾“å®è¦åˆ é™¤çš„è”ç³»äºº" << endl;
 	string d_name;
 	cin >> d_name;
 	int i,j;
@@ -57,7 +57,7 @@ void deleteperson(lu* l)
 				l->personArray[j] = l->personArray[j + 1];
 			}
 			l->n--;
-			cout<<"É¾³ý³É¹¦" << endl;
+			cout<<"åˆ é™¤æˆåŠŸ" << endl;
 		}
 	}
 	system("pause");
@@ -66,7 +66,7 @@ void deleteperson(lu* l)
 
 void modiperson(lu* l)
 {
-	cout << "ÇëÊäÄþÒªÉ¾³ýµÄÁªÏµÈË" << endl;
+	cout << "è¯·è¾“å®è¦åˆ é™¤çš„è”ç³»äºº" << endl;
 	string m_name;
 	cin >> m_name;
 	int i, j;
@@ -75,21 +75,21 @@ void modiperson(lu* l)
 	{
 		if (m_name == l->personArray[i].p_name)
 		{
-			cout << "ÇëÊäÈëÐÕÃû" << endl;
+			cout << "è¯·è¾“å…¥å§“å" << endl;
 			string name;
 			cin >> name;
 			l->personArray[i].p_name = name;
 
-			cout << "ÇëÊäÈëµç»°" << endl;
+			cout << "è¯·è¾“å…¥ç”µè¯" << endl;
 			int phone;
 			cin >> phone;
 			l->personArray[i].p_phone = phone;
 
-			cout << "ÇëÊäÈë×¡Ö·" << endl;
+			cout << "è¯·è¾“å…¥ä½å€" << endl;
 			string adress;
 			cin >> adress;
 			l->personArray[i].p_address = adress;
-			cout << "ÐÞ¸ÄÁªÏµÈË³É¹¦" << endl;
+			cout << "ä¿®æ”¹è”ç³»äººæˆåŠŸ" << endl;
 			system("pause");
 			system("cls");
 		}
@@ -99,7 +99,7 @@ void modiperson(lu* l)
 
 void findperson(lu *l)
 {
-	cout<<"ÇëÊäÄþÒª²éÕÒµÄÁªÏµÈË" << endl;
+	cout<<"è¯·è¾“å®è¦æŸ¥æ‰¾çš„è”ç³»äºº" << endl;
 	string find_name;
 	cin >> find_name;
 	int i;
@@ -108,7 +108,7 @@ void findperson(lu *l)
 	{
 		if (find_name == l->personArray[i].p_name)
 		{
-			cout <<l->n+1<< ". ÐÕÃû:" << l->personArray[i].p_name << " | µç»°:" << l->personArray[i].p_phone << " | ×¡Ö·:" << l->personArray[i].p_address << endl;
+			cout <<l->n+1<< ". å§“å:" << l->personArray[i].p_name << " | ç”µè¯:" << l->personArray[i].p_phone << " | ä½å€:" << l->personArray[i].p_address << endl;
 		}
 	}
 	system("pause");
@@ -117,22 +117,22 @@ void findperson(lu *l)
 
 void addperson(lu *l)
 {
-	cout << "ÇëÊäÈëÐÕÃû" << endl;
+	cout << "è¯·è¾“å…¥å§“å" << endl;
 	string name;
 	cin >> name;
 	l->personArray[l->n].p_name = name;
 
-	cout << "ÇëÊäÈëµç»°" << endl;
+	cout << "è¯·è¾“å…¥ç”µè¯" << endl;
 	int phone;
 	cin >> phone;
 	l->personArray[l->n].p_phone = phone;
 
-	cout << "ÇëÊäÈë×¡Ö·" << endl;
+	cout << "è¯·è¾“å…¥ä½å€" << endl;
 	string adress;
 	cin >> adress;
 	l->personArray[l->n].p_address = adress;
 
-	cout << "Ìí¼ÓÁªÏµÈË³É¹¦" << endl;
+	cout << "æ·»åŠ è”ç³»äººæˆåŠŸ" << endl;
 	system("pause");
 	system("cls");
 
@@ -140,15 +140,15 @@ void addperson(lu *l)
 
 void showmenu()
 {
-	cout << "*Í¨Ñ¶Â¼ÏµÍ³*" << endl;
+	cout << "*é€šè®¯å½•ç³»ç»Ÿ*" << endl;
 	cout << "*----------*" << endl;
-	cout << "** 1.Ìí¼Ó **" << endl;
-	cout << "** 2.ÏÔÊ¾ **" << endl;
-	cout << "** 3.É¾³ý **" << endl;
-	cout << "** 4.²éÕÒ **" << endl;
-	cout << "** 5.ÐÞ¸Ä **" << endl;
-	cout << "** 6.Çå¿Õ **" << endl;
-	cout << "** 7.ÍË³ö **" << endl;
+	cout << "** 1.æ·»åŠ  **" << endl;
+	cout << "** 2.æ˜¾ç¤º **" << endl;
+	cout << "** 3.åˆ é™¤ **" << endl;
+	cout << "** 4.æŸ¥æ‰¾ **" << endl;
+	cout << "** 5.ä¿®æ”¹ **" << endl;
+	cout << "** 6.æ¸…ç©º **" << endl;
+	cout << "** 7.é€€å‡º **" << endl;
 	cout << "**--------**" << endl;
 	cout << "************" << endl;
 };
@@ -157,43 +157,43 @@ int main()
 {
 	int putin;
 	lu ll;
-	ll.n = 0;   //¸öÊý
+	ll.n = 0;   //ä¸ªæ•°
 
-while (true)        //Ñ­»·£¬³ýÁË7£¬¶¼Ö´ÐÐÏàÓ¦ÃüÁî£¬7ÍË³öÑ­»·
+while (true)        //å¾ªçŽ¯ï¼Œé™¤äº†7ï¼Œéƒ½æ‰§è¡Œç›¸åº”å‘½ä»¤ï¼Œ7é€€å‡ºå¾ªçŽ¯
 {
 	    showmenu();
-        cout << "ÇëÊäÈëÄãÐèÒªµÄÖ´ÐÐµÄÖ¸Áî" << endl;
+        cout << "è¯·è¾“å…¥ä½ éœ€è¦çš„æ‰§è¡Œçš„æŒ‡ä»¤" << endl;
 		cin >> putin;
 
 	switch (putin)
 	{
 	case 1:
-		cout << "** 1.ÄúÒªÌí¼Ó **" << endl;
+		cout << "** 1.æ‚¨è¦æ·»åŠ  **" << endl;
 		addperson(&ll);
 		ll.n++;
 		break;
 	case 2:
-		cout << "** 2.ÄúÒªÏÔÊ¾ **" << endl;
+		cout << "** 2.æ‚¨è¦æ˜¾ç¤º **" << endl;
 		showperson(& ll);
 		break;
 	case 3:
-		cout << "** 3.ÄúÒªÉ¾³ý **" << endl;
+		cout << "** 3.æ‚¨è¦åˆ é™¤ **" << endl;
 		deleteperson(&ll);
 		break;
 	case 4:
-		cout << "** 4.ÄúÒª²éÕÒ **" << endl;
+		cout << "** 4.æ‚¨è¦æŸ¥æ‰¾ **" << endl;
 		findperson(&ll);
 		break;
 	case 5:
-		cout << "** 5.ÄúÒªÐÞ¸Ä **" << endl;
+		cout << "** 5.æ‚¨è¦ä¿®æ”¹ **" << endl;
 		modiperson(&ll);
 		break;
 	case 6:
-		cout << "** 6.ÄúÒªÇå¿Õ **" << endl;
+		cout << "** 6.æ‚¨è¦æ¸…ç©º **" << endl;
 		clearperson(&ll);
 		break;
 	default:
-		cout<<"ÄþÍË³öÁË£¬»¶Ó­ÏÂ´ÎÊ¹ÓÃ¡£" << endl;
+		cout<<"å®é€€å‡ºäº†ï¼Œæ¬¢è¿Žä¸‹æ¬¡ä½¿ç”¨ã€‚" << endl;
 		system("pause");
 		return 0;
 	}
